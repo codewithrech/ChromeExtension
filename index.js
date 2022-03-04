@@ -6,10 +6,12 @@ const ulEl=document.getElementById("ul-el");
 
 inputBtn.addEventListener("click",function(){
     myLeads.push(inputEl.value);
-    renderLeads();
-    
-    
     inputEl.value=""; 
+   localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+   renderLeads();
+   console.log(localStorage.getItem("myLeads"));
+   let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") );
+   console.log("@",leadsFromLocalStorage ); 
 });
 function renderLeads(){
     let listItems="";
@@ -23,6 +25,9 @@ function renderLeads(){
         </li>
          `; 
     ulEl.innerHTML=listItems;
+    // localStorage.setItem("mezgeb",myLeads[R]);
+    // localStorage.clear(); 
+    //   console.log(localStorage.getItem("mezgeb"));
 }   
 }
 //creat element
@@ -31,4 +36,4 @@ function renderLeads(){
        // const li=document.createElement("li");
        // li.innerHTML=myLeads[R];
        // ulEl.append(li); 
-        
+      
