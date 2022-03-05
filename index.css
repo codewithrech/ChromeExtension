@@ -19,7 +19,7 @@ input{
 
 } 
 button{
-    border:none; 
+    border:1px solid #5f9341 ; 
     border-radius:15px;
     padding:10px 20px;
     margin-top:10px;
@@ -31,6 +31,10 @@ button{
     height:60px;
     font-size: 20px;
 
+}
+#delete-btn{
+    background:white;
+    color:#5f9341;
 }
 ul{
     list-style: none;
